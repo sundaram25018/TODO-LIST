@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 st.set_page_config(page_title="📝 To-Do App", layout="centered")
-API_URL = "http://localhost:8000"
+API_URL = "https://todo-list-7tdy.onrender.com"
 
 st.title("📝 To-Do List App")
 st.markdown("---")
