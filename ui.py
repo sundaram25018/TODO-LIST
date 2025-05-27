@@ -2,7 +2,8 @@ import streamlit as st
 import requests
 
 st.set_page_config(page_title="📝 To-Do App", layout="centered")
-API_URL = "https://todo-list-7tdy.onrender.com"
+API_URL  = "http://fastapi:8000"
+
 
 st.title("📝 To-Do List App")
 st.markdown("---")
@@ -23,7 +24,7 @@ with st.expander("➕ Add a New Task", expanded=True):
         res = requests.post(f"{API_URL}/tasks/", json=new_task)
         if res.status_code == 200:
             st.success("Task added!")
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error("Failed to add task.")
 
